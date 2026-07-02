@@ -5,7 +5,12 @@ export interface Note {
   title: string;
   content: string;
   tag: NoteTag;
+  createdAt: string;
+  updatedAt: string;
 }
 
-// Тип для створення нової нотатки (без id)
-export type NewNote = Omit<Note, 'id'>;
+export interface NewNote {
+  title: string;
+  content: string;
+  tag: NoteTag;
+}
